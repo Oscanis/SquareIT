@@ -1,0 +1,54 @@
+
+.tile-wrapper {
+    height: 8em;
+    width: 8em;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: lighten(goldenrod, 10%);
+        cursor: pointer;
+        user-select: none;
+
+        .center-arrow {
+            transform: rotate(90deg);
+        }
+    }
+
+    .center-arrow {
+        position: absolute;
+        top: 1.8em;
+        left: 1.8em;
+        transition: all .3s ease-in-out;
+    }
+
+
+    .tile-top {
+        position: absolute;
+        top: 0.2em;
+        left: 2em;
+        text-shadow: 1px 1px black;
+    }
+    .tile-right {
+        position: absolute;
+        top: 1.7em;
+        left: 3.7em;
+        text-shadow: 1px 1px black;
+    }
+    .tile-bottom {
+        position: absolute;
+        top: 3.3em;
+        left: 2em;
+        text-shadow: 1px 1px black;
+    }
+    .tile-left {
+        position: absolute;
+        top: 1.7em;
+        left: 0.3em;
+        text-shadow: 1px 1px black;
+    }
+}

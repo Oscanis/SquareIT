@@ -1,0 +1,18 @@
+<div class="header-container">
+    <mat-toolbar color="primary">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="hamburger-icon" aria-label="Hamburger icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <a [routerLink]="['/']"><button mat-menu-item>Game</button></a>
+        <a [routerLink]="['/setup']"><button mat-menu-item>Setup</button></a>
+        <a [routerLink]="['/about']"><button mat-menu-item>About</button></a>
+      </mat-menu>
+      <span>SquareIt!</span>
+      <span class="header"></span>
+      <div class="toggle-theme">Dark mode: 
+        <mat-slide-toggle (click)="toggleTheme()">
+         </mat-slide-toggle>
+       </div>
+    </mat-toolbar>
+</div>

@@ -1,0 +1,10 @@
+<div class="infobar-wrapper">
+    <div class="infobar">
+        <h2 class="rotates" id="rotates">Rotates remaining: {{ game.rotatesLeft }}</h2>
+        <h2 class="score">Score: {{ game.score }}</h2>
+    </div>
+    <div class="buttonbar">
+        <button mat-flat-button color="primary" (click)="reset()">Reset Board</button>
+    </div>
+</div>
+

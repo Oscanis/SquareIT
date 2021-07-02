@@ -1,0 +1,8 @@
+<app-infobar></app-infobar>
+<div class="board-wrapper">
+    <div class="board"  [ngStyle]="getLayout()">
+        <div *ngFor="let cell of game.board" class="tile">
+            <app-tile [cell]="cell"></app-tile>
+        </div>
+    </div>
+</div>

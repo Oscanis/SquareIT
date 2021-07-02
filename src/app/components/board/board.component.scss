@@ -1,0 +1,19 @@
+.board-wrapper {
+    margin: 3em auto;
+    display: flex;
+    justify-content: center;
+
+    .board {
+        display: inline-grid;
+
+        .tile {
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            flex-basis: calc(25%);  
+            justify-content: center;
+            flex-direction: column;
+        }
+
+    }
+}

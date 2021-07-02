@@ -1,0 +1,12 @@
+<div class="tile-wrapper mat-elevation-z4"
+     [ngStyle]="{'background-color': (game.darkmode) ? 'teal' : 'goldenrod'}"
+     (click)="onRotate()"
+     matRipple
+     [matRippleColor]="rippleColor"
+>
+    <h1 class="tile-top" [ngStyle]="{'color': (cell.topMatch) ? 'red' : 'white'}">{{ cell.top }}</h1>
+    <h1 class="tile-right" [ngStyle]="{'color': (cell.rightMatch) ? 'red' : 'white'}">{{ cell.right }}</h1>
+    <h1 class="tile-bottom" [ngStyle]="{'color': (cell.bottomMatch) ? 'red' : 'white'}">{{ cell.bottom }}</h1>
+    <h1 class="tile-left" [ngStyle]="{'color': (cell.leftMatch) ? 'red' : 'white'}">{{ cell.left }}</h1>
+    <mat-icon class="center-arrow">refresh</mat-icon>
+</div>

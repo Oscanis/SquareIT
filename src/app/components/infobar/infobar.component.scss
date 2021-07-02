@@ -1,0 +1,26 @@
+.infobar-wrapper {
+    margin: 2em auto 0em auto;
+    align-items: center;
+
+    .infobar {
+        display: flex;
+        justify-content: center;
+
+        .rotates {
+            margin-right: 1em;
+        }
+
+        .norotates {
+            color: red;
+        }
+
+        .score {
+            margin-left: 1em;
+        }
+    }
+
+    .buttonbar {
+        display: flex;
+        justify-content: center;
+    }
+}
