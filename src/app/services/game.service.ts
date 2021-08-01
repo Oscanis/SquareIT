@@ -20,10 +20,18 @@ export class GameService {
 
   constructor() { }
 
+  reset() {
+    this.rotatesLeft = 10;
+    this.score = 0;
+    this.topScore = 0;
+  }
+
   generateTiles() {
 
     this.rotatesLeft = this.maxSteps;
     document.getElementById("rotates").classList.remove("norotates");
+
+
     this.score = 0;
 
     this.board = new Array();
@@ -66,6 +74,7 @@ export class GameService {
 
       if(this.rotatesLeft === 0) {
         document.getElementById("rotates").classList.add("norotates");
+        this.finish();
       }
     }
   }
@@ -131,5 +140,13 @@ export class GameService {
           break;
       }
     });
+  }
+
+  finish() {
+    this.rotatesLeft = 0;
+    document.getElementById("rotates").classList.add("norotates");
+    if(this.score > this.topScore) {
+      this.topScore = this.score;
+    }
   }
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { MaterialModule } from './material';
 import { InfobarComponent } from './components/infobar/infobar.component';
 import { SetupComponent } from './components/setup/setup.component';
 import { AboutComponent } from './components/about/about.component';
+import { LoginComponent } from './components/login/login.component';
+import { PlayerComponent } from './components/player/player.component';
+import { PlayerInfoComponent } from './components/player-info/player-info.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +30,9 @@ import { AboutComponent } from './components/about/about.component';
     InfobarComponent,
     SetupComponent,
     AboutComponent,
+    LoginComponent,
+    PlayerComponent,
+    PlayerInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +40,8 @@ import { AboutComponent } from './components/about/about.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

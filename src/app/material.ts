@@ -9,6 +9,7 @@ import {MatRippleModule} from '@angular/material/core';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { MatInputModule } from '@angular/material/input';
               MatRippleModule,
               MatMenuModule,
               MatFormFieldModule,
-              MatInputModule
+              MatInputModule,
+              MatCardModule
             ],
     
     exports: [MatButtonModule,
@@ -29,7 +31,8 @@ import { MatInputModule } from '@angular/material/input';
               MatRippleModule,
               MatMenuModule,
               MatFormFieldModule,
-              MatInputModule
+              MatInputModule,
+              MatCardModule
             ],
 })
 export class MaterialModule {};

@@ -5,11 +5,21 @@
       </button>
       <mat-menu #menu="matMenu">
         <a [routerLink]="['/']"><button mat-menu-item>Game</button></a>
+        <a [routerLink]="['/player']"><button mat-menu-item>Player</button></a>
         <a [routerLink]="['/setup']"><button mat-menu-item>Setup</button></a>
         <a [routerLink]="['/about']"><button mat-menu-item>About</button></a>
       </mat-menu>
       <span>SquareIt!</span>
       <span class="header"></span>
+      <div class="player">
+        <div *ngIf="!player.loggedIn">
+          <button mat-flat-button (click)="login()">Login</button>
+        </div>
+        <div *ngIf="player.loggedIn">
+          Welcome, {{ player.user.userName }}!
+          <button mat-flat-button (click)="login()">Details</button>
+        </div>
+      </div>
       <div class="toggle-theme">Dark mode: 
         <mat-slide-toggle (click)="toggleTheme()">
          </mat-slide-toggle>

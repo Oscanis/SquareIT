@@ -8,5 +8,5 @@
     <h1 class="tile-right" [ngStyle]="{'color': (cell.rightMatch) ? 'red' : 'white'}">{{ cell.right }}</h1>
     <h1 class="tile-bottom" [ngStyle]="{'color': (cell.bottomMatch) ? 'red' : 'white'}">{{ cell.bottom }}</h1>
     <h1 class="tile-left" [ngStyle]="{'color': (cell.leftMatch) ? 'red' : 'white'}">{{ cell.left }}</h1>
-    <mat-icon class="center-arrow">refresh</mat-icon>
+    <mat-icon class="center-arrow" [ngClass]="{'disabled' : game.rotatesLeft === 0}">refresh</mat-icon>
 </div>

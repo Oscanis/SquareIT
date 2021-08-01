@@ -1,0 +1,18 @@
+.login-wrapper {
+    display: block;
+    width: 30%;
+    margin: 2em auto;
+
+    .input-field {
+        width: 100%;
+
+        .full-width {
+            width: 100%;
+        }
+    }
+
+    .input-button {
+        width: 46%;
+        margin: 2%;
+    }
+}
