@@ -1,6 +1,6 @@
 export interface User {
-    _id: String,
-    userName: String,
-    password: String,
-    highScore: Number
+    _id: string,
+    userName: string,
+    password: string,
+    highScore: number
 }

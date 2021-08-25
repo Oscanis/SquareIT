@@ -1,0 +1,14 @@
+<div class="toplist-wrapper">
+    <mat-card>
+        <div class="card-header">
+            <h2 class="title">Hall of Fame</h2>
+        </div>
+        <div class="card-content">
+            <ol>
+                <li *ngFor="let player of playerList">
+                    <b>{{ player.name }}</b> - Score: {{ player.score }}
+                </li>
+            </ol>
+        </div>
+    </mat-card>
+

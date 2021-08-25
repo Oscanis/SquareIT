@@ -20,6 +20,7 @@ import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { PlayerComponent } from './components/player/player.component';
 import { PlayerInfoComponent } from './components/player-info/player-info.component';
+import { ToplistComponent } from './components/toplist/toplist.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PlayerInfoComponent } from './components/player-info/player-info.compon
     AboutComponent,
     LoginComponent,
     PlayerComponent,
-    PlayerInfoComponent
+    PlayerInfoComponent,
+    ToplistComponent
   ],
   imports: [
     BrowserModule,

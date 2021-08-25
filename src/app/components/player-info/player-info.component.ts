@@ -25,4 +25,10 @@ export class PlayerInfoComponent implements OnInit {
     this.router.navigateByUrl('/player');
   }
 
+  delete() {
+    this.player.delete();
+    this.game.reset();
+    this.router.navigateByUrl('/player');
+  }
+
 }

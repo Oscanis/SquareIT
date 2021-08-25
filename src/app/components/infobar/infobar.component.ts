@@ -22,7 +22,7 @@ export class InfobarComponent implements OnInit {
   finish() {
     this.game.finish();
     if(this.game.topScore > this.player.user.highScore) {
-      this.player.user.highScore = this.game.topScore;
+      this.player.saveHighScore(this.game.topScore);
     }
   }
 
