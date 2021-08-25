@@ -16,7 +16,7 @@ export class PlayerInfoComponent implements OnInit {
   }
 
   play() {
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/game');
   }
 
   logout() {

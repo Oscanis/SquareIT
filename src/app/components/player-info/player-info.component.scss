@@ -1,5 +1,16 @@
 .playerinfo-wrapper {
     display: block;
-    width: 30%;
+    width: 40%;
     margin: 2em auto;
+
+    mat-card {
+        width: 100%;
+
+        mat-card-header {
+
+            mat-card-title {
+                width: 100%;
+            }
+        }
+    }
 }
