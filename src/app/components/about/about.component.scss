@@ -1,0 +1,31 @@
+.about-wrapper {
+    display: block;
+    width: 40%;
+    margin: 2em auto;
+
+    mat-card {
+        width: 100%;
+        margin-bottom: 1em;
+
+        .card-header {
+            text-align: center;
+            .title {
+                margin-bottom: 0;
+            }
+            .subtitle {
+                padding-bottom: 1em;
+                border-bottom: 1px solid gray;
+            }
+        }
+
+        .card-content {
+            width: 90%;
+            margin: auto;
+            text-align: center;
+
+            ul {
+                list-style-type: square;
+            }
+        }
+    }
+}

@@ -46,12 +46,16 @@ $SquareIt-dark-theme: mat-dark-theme((
   background-color: #ddd;
   color: #333;
   @include angular-material-theme($SquareIt-theme);
+  background-image: url("./assets/square-background2.jpg");
+  background-size: cover;
 }
 
 .darkmode {
   background-color: #333;
   color: honeydew;
   @include angular-material-color($SquareIt-dark-theme);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/square-background2.jpg");
+  background-size: cover;
 }
 
 /* You can add global styles to this file, and also import other style files */

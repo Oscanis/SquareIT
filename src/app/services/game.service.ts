@@ -8,7 +8,7 @@ export class GameService {
 
   darkmode: boolean = false;
 
-  boardWidth: number = 3;
+  boardWidth: number = 4;
   boardHeight: number = 3;
   maxSteps: number = 10;
 

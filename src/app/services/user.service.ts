@@ -16,8 +16,10 @@ export class UserService {
   constructor(private http: HttpClient) { }
   
   login(name: string, pass: string) {
-    this.user = {_id: "abc123", userName: name, password: pass, highScore: 0};
-    this.loggedIn = true;
+    //if() {
+      this.user = {_id: "abc123", userName: name, password: pass, highScore: 0};
+      this.loggedIn = true;
+    //}
   }
 
   logout() {
