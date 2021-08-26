@@ -5,7 +5,7 @@
         </div>
         <div class="card-content">
             <ol>
-                <li *ngFor="let p of player.topplayers">
+                <li *ngFor="let p of player.topplayers | slice : 0 : 10">
                     <b>{{ p.name }}</b> - Score: {{ p.score }}
                 </li>
             </ol>
