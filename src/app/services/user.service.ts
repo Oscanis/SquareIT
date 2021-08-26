@@ -18,7 +18,8 @@ export class UserService {
   loggedIn: boolean = false;
   topplayers: {name: string, score: number}[];
 
-  private apiurl = "http://localhost:5000";
+  //private apiurl = "http://localhost:5000"; for local testing
+  private apiurl = "https://squareit-api.herokuapp.com";
 
   constructor(private http: HttpClient) { }
   
