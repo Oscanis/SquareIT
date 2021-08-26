@@ -39,6 +39,27 @@ export class UserService {
             }
         }
         catch(e) {
+          alert("Player doesn't exist!");
+        }
+      });
+  }
+
+  newPlayer(name: string, pass: string) {
+    this.getUserByName(name).subscribe(user => {
+      try {
+        if(user[0].userName != undefined) {
+          alert(user.userName + " already exists!");
+        }
+      }
+      catch
+      {
+        if(name === "") {
+          alert("Please type your name!");
+        }
+        else if(pass === "") {
+          alert("Please give a password!");
+        }
+        else {
           if(confirm("Create new user with the given password?")) {
             const nUser: User = {
               _id: null,
@@ -46,7 +67,7 @@ export class UserService {
               password: pass,
               highScore: 0
             }
-
+    
             this.postUser(nUser).subscribe(newUser => {
               this.user = newUser;
               this.statusText = this.user.userName + " created and logged in";
@@ -59,7 +80,8 @@ export class UserService {
             console.log(this.statusText);
           }
         }
-      });
+      }
+    });
   }
 
   saveHighScore(highScore: number) {

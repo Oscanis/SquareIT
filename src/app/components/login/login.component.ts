@@ -24,8 +24,13 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl('/');
   }
 
-  onCancel() {
+  onNew() {
+    this.player.newPlayer(this.userFormControl.value, this.passFormControl.value);
     this.router.navigateByUrl('/');
+  }
+
+  onPlay() {
+    this.router.navigateByUrl('/game');
   }
 
 }
