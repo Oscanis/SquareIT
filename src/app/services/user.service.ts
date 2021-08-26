@@ -16,6 +16,7 @@ export class UserService {
 
   user: User;
   loggedIn: boolean = false;
+  statusText: string = "Please log in";
   topplayers: {name: string, score: number}[];
 
   //private apiurl = "http://localhost:5000"; for local testing
@@ -29,8 +30,9 @@ export class UserService {
         try {
             if(user[0].userName === name && user[0].password === pass) {
               this.user = user[0];
+              this.statusText = "Successfully logged in as " + this.user.userName;
+              console.log(this.statusText);
               this.loggedIn = true;
-              console.log("logged in as " + this.user.userName);
             }
             else {
               alert("Incorrect password, try again!");
@@ -47,12 +49,14 @@ export class UserService {
 
             this.postUser(nUser).subscribe(newUser => {
               this.user = newUser;
+              this.statusText = this.user.userName + " created and logged in";
+              console.log(this.statusText);
               this.loggedIn = true;
-              console.log(this.user.userName + " created, please log in");
             });
           }
           else {
-            console.log("user creation cancelled");
+            this.statusText = "User creation cancelled";
+            console.log(this.statusText);
           }
         }
       });
@@ -84,6 +88,7 @@ export class UserService {
         return {'name': element.userName, 'score': element.highScore}
       });
       this.topplayers = toplist;
+      this.topplayers.sort((a, b) => (a.score - b.score)).reverse();
       console.log(this.topplayers);
     });
   }

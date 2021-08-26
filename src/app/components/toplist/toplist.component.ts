@@ -12,18 +12,10 @@ export class ToplistComponent implements OnInit {
 
   playerList: {name: string, score: number}[];
 
-  constructor(private player: UserService) { }
+  constructor(public player: UserService) { }
 
   ngOnInit(): void {
     this.player.topList();
-    this.playerList = this.player.topplayers.sort((a, b) => (a.score - b.score));
-    this.playerList.reverse();
   }
-  
-  /*ngDoCheck() {
-    this.player.topList();
-    this.playerList = this.player.topplayers;
-  }*/
-
 
 }
