@@ -15,6 +15,9 @@ export class InfobarComponent implements OnInit {
   constructor(private router: Router, public game: GameService, public player: UserService) { }
 
   ngOnInit(): void {
+    if(this.player.loggedIn) {
+      this.game.topScore = this.player.user.highScore;
+    }
   }
 
   reset() {
@@ -23,7 +26,7 @@ export class InfobarComponent implements OnInit {
 
   finish() {
     this.game.finish();
-    if(this.game.topScore > this.player.user.highScore) {
+    if(this.player.loggedIn && this.game.topScore > this.player.user.highScore) {
       this.player.saveHighScore(this.game.topScore);
     }
   }

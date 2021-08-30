@@ -23,6 +23,7 @@ export class TileComponent implements OnInit {
 
     if(this.player.loggedIn && this.game.topScore > this.player.user.highScore) {
       this.player.user.highScore = this.game.topScore;
+      this.player.saveHighScore(this.game.topScore);
     }
   }
 }
