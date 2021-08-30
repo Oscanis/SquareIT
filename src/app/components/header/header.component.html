@@ -10,15 +10,16 @@
         <a [routerLink]="['/setup']"><button mat-menu-item>Setup</button></a>
         <a [routerLink]="['/about']"><button mat-menu-item>About</button></a>
       </mat-menu>
-      <span>SquareIt!</span>
+      <span class="title">SquareIt!</span>
+      <span class="material-icons title">widgets</span>
       <span class="header"></span>
       <div class="player">
         <div *ngIf="!player.loggedIn">
-          <button mat-flat-button (click)="login()">Login</button>
+          <button mat-flat-button (click)="login()">Login <mat-icon>login</mat-icon> </button>
         </div>
         <div *ngIf="player.loggedIn">
           Welcome, {{ player.user.userName }}!
-          <button mat-flat-button (click)="login()">Details</button>
+          <button mat-flat-button (click)="login()">Details <mat-icon>person</mat-icon> </button>
         </div>
       </div>
       <div class="toggle-theme">Dark mode: 

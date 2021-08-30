@@ -1,12 +1,21 @@
 <div class="infobar-wrapper">
     <div class="infobar">
-        <h2 class="rotates" id="rotates">Rotates remaining: {{ game.rotatesLeft }}</h2>
-        <h2 class="score">Current Score: {{ game.score }}</h2>
-        <h2 class="score">Top Score: {{ game.topScore }}</h2>
+        <h2 id="rotates">Rotates remaining: {{ game.rotatesLeft }}</h2>
+        <h2> | </h2>
+        <h2>Current Score: {{ game.score }}</h2>
+        <h2> | </h2>
+        <h2>Top Score: {{ game.topScore }}</h2>
     </div>
     <div class="buttonbar">
-        <button mat-flat-button color="primary" (click)="finish()">Finish Round</button>
-        <button mat-flat-button color="primary" (click)="reset()">Reset Board</button>
+        <button mat-flat-button color="primary" (click)="finish()">
+            Finish Round <mat-icon>done</mat-icon>
+        </button>
+        <button mat-flat-button color="primary" (click)="reset()">
+            Reset Board <mat-icon>undo</mat-icon>
+        </button>
+        <button mat-flat-button color="primary" (click)="hof()">
+            Hall of Fame <mat-icon>emoji_events</mat-icon>
+        </button>
     </div>
 </div>
 

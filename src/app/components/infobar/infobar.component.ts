@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { GameService } from 'src/app/services/game.service';
 import { UserService } from 'src/app/services/user.service';
+
 
 @Component({
   selector: 'app-infobar',
@@ -10,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class InfobarComponent implements OnInit {
 
-  constructor(public game: GameService, public player: UserService) { }
+  constructor(private router: Router, public game: GameService, public player: UserService) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +26,10 @@ export class InfobarComponent implements OnInit {
     if(this.game.topScore > this.player.user.highScore) {
       this.player.saveHighScore(this.game.topScore);
     }
+  }
+
+  hof () {
+    this.router.navigateByUrl('/toplist');
   }
 
 }

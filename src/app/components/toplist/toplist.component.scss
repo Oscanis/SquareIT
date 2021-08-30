@@ -1,6 +1,6 @@
 .toplist-wrapper {
     display: block;
-    width: 200px;
+    width: 300px;
     margin: 2em auto;
 
     mat-card {
@@ -8,13 +8,25 @@
         margin-bottom: 1em;
 
         .card-header {
+            display: flex;
+            justify-content: center;
             text-align: center;
-            .title {
+
+            .hof-icon {
+                font-size: 2.5em;
+                margin-right: 0.5em;
+            }
+            .hof-text {
                 margin-bottom: 0;
             }
-            .subtitle {
-                padding-bottom: 1em;
-                border-bottom: 1px solid gray;
+        }
+
+        .loading {
+            margin-top: 2em;
+            text-align: center;
+
+            .load-icon {
+                animation: rotation 2s infinite linear;
             }
         }
 
@@ -22,9 +34,29 @@
             width: 90%;
             margin: auto;
 
-            ul {
-                list-style-type: square;
+            ol {
+                font-size: 1.2em;
             }
+        }
+
+        .toplist-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5em;
+        }
+
+        .toplist-body {
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

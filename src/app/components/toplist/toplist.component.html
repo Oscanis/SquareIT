@@ -1,12 +1,25 @@
 <div class="toplist-wrapper">
     <mat-card>
         <div class="card-header">
-            <h2 class="title">Hall of Fame</h2>
+            <mat-icon class="hof-icon">emoji_events</mat-icon>
+            <h2 class="hof-text">
+                Hall of Fame
+            </h2>
         </div>
         <div class="card-content">
-            <ol>
+            <div class="loading" *ngIf="!player.topplayers">Loading...<br>
+                <mat-icon class="load-icon">refresh</mat-icon>
+            </div>
+            <ol *ngIf="player.topplayers">
+                <div class="toplist-header">
+                    <span>Name</span>
+                    <span>Score</span>
+                </div>
                 <li *ngFor="let p of player.topplayers | slice : 0 : 10">
-                    <b>{{ p.name }}</b> - Score: {{ p.score }}
+                    <div class="toplist-body">
+                        <span><b>{{ p.name }}</b></span>
+                        <span>{{ p.score }}</span>
+                    </div>
                 </li>
             </ol>
         </div>
