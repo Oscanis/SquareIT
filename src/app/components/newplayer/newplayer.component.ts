@@ -14,6 +14,7 @@ export class NewplayerComponent implements OnInit {
   userFormControl = new FormControl("", [Validators.required]);
   passFormControl = new FormControl("", [Validators.required]);
   passRepeatFormControl = new FormControl("", [Validators.required]);
+  accepted: boolean = false;
 
   constructor(private router: Router, private player: UserService) { }
 
@@ -21,7 +22,10 @@ export class NewplayerComponent implements OnInit {
   }
 
   onSubmit() {
-    if(this.userFormControl.value === "")
+    if(!this.accepted) {
+      alert("Please read and accept the Terms of Use");
+    }
+    else if(this.userFormControl.value === "")
     {
       alert("Please give an username");
     }

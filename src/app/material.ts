@@ -5,11 +5,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatRippleModule} from '@angular/material/core';
+import { MatRippleModule } from '@angular/material/core';
 import { MatMenuModule} from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {MatCardModule} from '@angular/material/card';
               MatMenuModule,
               MatFormFieldModule,
               MatInputModule,
-              MatCardModule
+              MatCardModule,
+              MatCheckboxModule
             ],
     
     exports: [MatButtonModule,
@@ -32,7 +34,8 @@ import {MatCardModule} from '@angular/material/card';
               MatMenuModule,
               MatFormFieldModule,
               MatInputModule,
-              MatCardModule
+              MatCardModule,
+              MatCheckboxModule
             ],
 })
 export class MaterialModule {};

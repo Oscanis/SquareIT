@@ -23,6 +23,19 @@
             margin: auto;
             text-align: center;
 
+            .info {
+                text-align: center;
+                h3 {
+                    margin-top: 0.3em;
+                    font-weight: bold;
+                }
+        
+                h4 {
+                    font-weight: bold;
+                    color:darkorange;
+                }
+            }
+
             ul {
                 list-style-type: square;
             }

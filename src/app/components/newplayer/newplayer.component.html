@@ -38,6 +38,9 @@
             </mat-error>
         </mat-form-field>
     </div>
+    <div>
+        <mat-checkbox class="accept" [(ngModel)]="accepted">I accept the Terms of Use</mat-checkbox>
+    </div>
 
     <button class="input-button" mat-raised-button color="primary" (click)="onSubmit()">Create</button>
     <button class="input-button" mat-raised-button color="primary" (click)="onCancel()">Cancel</button>
@@ -45,6 +48,6 @@
         <h3>TERMS OF USE</h3>
         <p>This is a demo application, free to test and use.</p>
         <h4>Please note that secure user management is not implemented yet and the password is exposed!</h4>
-        <p>By creating a new user, you accept the above, so make sure to use a simple, fake password like '123'!</p>
+        <p>By creating a new user you accept the above, so make sure to use a simple, fake password like '123'!</p>
     </div>
 </div>
