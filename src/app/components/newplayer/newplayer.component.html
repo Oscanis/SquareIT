@@ -1,0 +1,48 @@
+<div class="newplayer-wrapper">
+    
+    <div class="input-field">
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput type="text" [formControl]="userFormControl">
+            <mat-error *ngIf="!userFormControl.hasError('required')">
+                Please enter your name
+            </mat-error>
+            <mat-error *ngIf="userFormControl.hasError('required')">
+                This field is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="input-field">
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" [formControl]="passFormControl">
+            <mat-error *ngIf="!passFormControl.hasError('required')">
+                Please enter your password
+            </mat-error>
+            <mat-error *ngIf="passFormControl.hasError('required')">
+                This field is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="input-field">
+        <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Repeat Password</mat-label>
+            <input matInput type="password" [formControl]="passRepeatFormControl">
+            <mat-error *ngIf="!passRepeatFormControl.hasError('required')">
+                Please repeat your password
+            </mat-error>
+            <mat-error *ngIf="passFormControl.hasError('required')">
+                This field is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <button class="input-button" mat-raised-button color="primary" (click)="onSubmit()">Create</button>
+    <button class="input-button" mat-raised-button color="primary" (click)="onCancel()">Cancel</button>
+    <div class="info">
+        <p>Please note that secure user management is not implemented yet and the password is exposed.</p>
+        <p>Make sure to use a simple, fake password like '123'!</p>
+    </div>
+</div>

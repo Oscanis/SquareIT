@@ -60,26 +60,19 @@ export class UserService {
           alert("Please give a password!");
         }
         else {
-          if(confirm("Create new user with the given password?")) {
-            const nUser: User = {
-              _id: null,
-              userName: name,
-              password: pass,
-              highScore: 0
-            }
-    
-            this.postUser(nUser).subscribe(newUser => {
-              this.user = newUser;
-              this.statusText = this.user.userName + " created and logged in";
-              console.log(this.statusText);
-              this.loggedIn = true;
-            });
+          const nUser: User = {
+            _id: null,
+            userName: name,
+            password: pass,
+            highScore: 0
           }
-          else {
-            this.statusText = "User creation cancelled";
+  
+          this.postUser(nUser).subscribe(newUser => {
+            this.user = newUser;
+            this.statusText = this.user.userName + " created and logged in";
             console.log(this.statusText);
-          }
-        }
+            this.loggedIn = true;
+          });        }
       }
     });
   }
@@ -98,10 +91,12 @@ export class UserService {
   }
 
   delete() {
-    this.deleteUser(this.user._id).subscribe(user => {
-      this.loggedIn = false;
-      console.log(this.user.userName + " deleted");
-    });
+    if(confirm("Are you sure you want to delete your account?")) {
+      this.deleteUser(this.user._id).subscribe(user => {
+        this.loggedIn = false;
+        console.log(this.user.userName + " deleted");
+      });
+    }
   }
 
   topList() {

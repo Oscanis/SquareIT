@@ -25,8 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   onNew() {
-    this.player.newPlayer(this.userFormControl.value, this.passFormControl.value);
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/newplayer');
   }
 
   onPlay() {

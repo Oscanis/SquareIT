@@ -21,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
 import { PlayerComponent } from './components/player/player.component';
 import { PlayerInfoComponent } from './components/player-info/player-info.component';
 import { ToplistComponent } from './components/toplist/toplist.component';
+import { NewplayerComponent } from './components/newplayer/newplayer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ToplistComponent } from './components/toplist/toplist.component';
     LoginComponent,
     PlayerComponent,
     PlayerInfoComponent,
-    ToplistComponent
+    ToplistComponent,
+    NewplayerComponent
   ],
   imports: [
     BrowserModule,

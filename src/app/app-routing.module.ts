@@ -4,12 +4,14 @@ import { AboutComponent } from './components/about/about.component';
 import { BoardComponent } from './components/board/board.component';
 import { SetupComponent } from './components/setup/setup.component';
 import { PlayerComponent } from './components/player/player.component';
+import { NewplayerComponent } from './components/newplayer/newplayer.component';
 import { ToplistComponent } from './components/toplist/toplist.component';
 
 const routes: Routes = [
   {path: 'game', component: BoardComponent},
   {path: 'toplist', component: ToplistComponent},
   {path: 'player', component: PlayerComponent},
+  {path: 'newplayer', component: NewplayerComponent},
   {path: 'about', component: AboutComponent},
   {path: 'setup', component: SetupComponent},
   {path: '',   redirectTo: '/player', pathMatch: 'full'}
